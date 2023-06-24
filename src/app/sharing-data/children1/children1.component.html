@@ -1,0 +1,10 @@
+<div class="border w-100 p-3">
+  <p>children1 works!</p>
+  {{ childrenItem }}
+
+  <div class="d-inline-flex">
+    <input type="text" class="form-control pr-3" [(ngModel)]="itemValue">
+    <button type="button" class="btn btn-primary" (click)="updateItem()">Update</button>
+  </div>
+
+</div>

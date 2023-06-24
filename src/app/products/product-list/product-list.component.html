@@ -1,0 +1,28 @@
+<ng-container *ngIf="productList.length > 0; else tableEmpty">
+  <table class="table table-hover table-bordered table-freeze-header">
+    <thead class="thead-primary">
+      <tr>
+        <th class="text-center">ID</th>
+        <th class="text-center">Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let row of productList">
+        <tr>
+          <td>{{ row.id }}</td>
+          <td>{{ row.title  || '-' }}</td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</ng-container>
+
+<ng-template #tableEmpty>
+  <div class="table-empty p-3 w-100 text-center">
+    <span>ไม่พบรายการ</span>
+  </div>
+</ng-template>
+
+
+    <!-- [ngClass]="[productList.length > 5 ? 'bg-primary' : '','text-white']" -->
+    <!-- [ngStyle]="{width:'100%'}" -->

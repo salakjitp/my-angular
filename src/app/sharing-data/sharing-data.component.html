@@ -1,0 +1,10 @@
+<div class="mb-4">
+  Parent Input : <input type="text"class="form-control" [(ngModel)]="parentItem">
+  parentItemChild1 : <span>{{parentItemChild1 | json}}</span>
+</div>
+
+<app-children1 [childrenItem]="parentItem" (newItemEvent)="parentItemEvent($event)"></app-children1>
+
+<div class="mb-4"></div>
+
+<app-children2 [childrenItem]="parentItem"></app-children2>
